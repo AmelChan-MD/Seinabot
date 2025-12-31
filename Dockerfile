@@ -1,4 +1,4 @@
-FROM node:24
+FROM node:20
 
 WORKDIR /app
 
@@ -8,4 +8,4 @@ RUN npm install --production
 COPY . .
 
 # Supaya process dianggap "aktif"
-CMD ["node", "main.js"]
+CMD ["node", "index.js"]
