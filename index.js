@@ -21,7 +21,7 @@ clearDirectory('../tmp');
 
 async function checkAndUpdate() {
     if (config.AutoUpdate === 'on') {
-        const { cloneOrUpdateRepo } = require('../lib/cekUpdate');
+        const { cloneOrUpdateRepo } = require('./lib/cekUpdate');
         await cloneOrUpdateRepo();
     }
     await connectToWhatsApp();
