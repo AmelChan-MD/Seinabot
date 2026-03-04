@@ -7,7 +7,7 @@ const chalk = require('chalk');
 const { writeLog } = require('./lib/log');
 const serializeMessage = require('./lib/serializeMessage');
 const messageHandler = require('./lib/xenovia');
-const { default: makeWASocket, useMultiFileAuthState, DisconnectReason, fetchLatestBaileysVersion } = require('baileys');
+const { default: makeWASocket, useMultiFileAuthState, DisconnectReason, fetchLatestBaileysVersion } = require('baileyz');
 const { Boom } = require('@hapi/boom');
 const qrcode = require('qrcode-terminal');
 const pino = require('pino');
@@ -41,7 +41,7 @@ async function connectToWhatsApp() {
         logger,
         printQRInTerminal: false,
         auth: state,
-        browser: ["Ubuntu", "Chrome", "24.04.3"],
+        browser: ["Ubuntu", "Chrome", "24.04.3", "XenoviaBot"]
     });
 
     global.sock = sock;
